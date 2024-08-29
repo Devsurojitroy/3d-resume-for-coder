@@ -7,11 +7,88 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <h1>John Doe's 3D Resume</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
     <div class="carousel-container">
         <div class="carousel">
-            <div class="carousel-item">About Me</div>
-            <div class="carousel-item">Skills</div>
-            <div class="carousel-item">Projects</div>
-            <div class="carousel-item">Experience</div>
-            <div class="carousel-
+            <div class="carousel-item" id="about">
+                <h2>About Me</h2>
+                <p>A passionate web developer with experience in building dynamic websites.</p>
+            </div>
+            <div class="carousel-item" id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML/CSS/JavaScript</li>
+                    <li>React.js/Vue.js</li>
+                    <li>Node.js/Express</li>
+                    <li>Python/Django</li>
+                    <li>UI/UX Design</li>
+                    <li>Database Management</li>
+                </ul>
+            </div>
+            <div class="carousel-item" id="projects">
+                <h2>Projects</h2>
+                <p>Developed an e-commerce platform and a social media app.</p>
+                <button class="more-btn" data-target="modal-projects">More Details</button>
+            </div>
+            <div class="carousel-item" id="experience">
+                <h2>Experience</h2>
+                <p>Worked at ABC Corp as a Full Stack Developer for 3 years.</p>
+            </div>
+            <div class="carousel-item" id="education">
+                <h2>Education</h2>
+                <p>Bachelor's in Computer Science from XYZ University.</p>
+            </div>
+            <div class="carousel-item" id="contact">
+                <h2>Contact</h2>
+                <p>Email: johndoe@example.com<br>Phone: 123-456-7890</p>
+                <button class="more-btn" data-target="modal-contact">Contact Form</button>
+            </div>
+        </div>
+        <div class="nav prev">&#10094;</div>
+        <div class="nav next">&#10095;</div>
+        <div class="floating-ring"></div> <!-- Added Floating Ring -->
+    </div>
+    <footer>
+        <p>&copy; 2024 John Doe | Built with passion and code</p>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal" id="modal-projects">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Project Details</h2>
+            <p>Project 1: E-commerce platform with features like payment integration, product filtering, and a recommendation system.</p>
+            <p>Project 2: Social media app with real-time messaging, notifications, and photo-sharing capabilities.</p>
+        </div>
+    </div>
+    <div class="modal" id="modal-contact">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Contact Form</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea><br>
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
